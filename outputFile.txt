@@ -11,10 +11,10 @@ Cantaloupe 2
 Beets 3
 Cauliflower 6
 Onions 4
-Pears 2
 Yams 5
 Apples 4
 Celery 6
 Limes 1
 Garlic 8
 Pumpkins 2
+Pears 1

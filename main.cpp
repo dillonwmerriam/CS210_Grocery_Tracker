@@ -31,11 +31,36 @@ int main() {
 	//Create map of item:quantity from comparing how many of each element in vector $uniqueItems is present in vector $itemList
 	itemList.GetItemQuantity(itemList.allItems, itemList.uniqueItems);
 
-	//Print name of item followed by quantity in digits
-	itemList.PrintInventoryNumber(itemList.itemsAndQuantity);
+	int menuOption = 0;
+	while (menuOption < 4 && menuOption >= 0) {
 
-	//Print name of item followed by quantity in asterisks (*)
-	itemList.PrintInventoryChar(itemList.itemsAndQuantity);
+		cout << "ENTER:" << endl;
+		cout << "1) Search for Quantity of Specific Item" << endl;
+		cout << "2) Items and Quantity" << endl;
+		cout << "3) Items and Quantity (Histogram)" << endl;
+		cout << "4) Exit" << endl;
+		cout << endl;
+		cin >> menuOption;
+
+		if (menuOption == 1) {
+			cout << "Enter item to search for: " << endl;
+			string searchItem;
+			cin >> searchItem;
+			cout << "Quantity " << searchItem << ": " << itemList.itemsAndQuantity[searchItem] << endl;
+		}
+		else if (menuOption == 2) {
+			//Print name of item followed by quantity in digits
+			itemList.PrintInventoryNumber(itemList.itemsAndQuantity);
+		}
+		else if (menuOption == 3) {
+			//Print name of item followed by quantity in asterisks (*)
+			itemList.PrintInventoryChar(itemList.itemsAndQuantity);
+		}
+		else if (menuOption == 4) {
+			//Exit loop
+			break;
+		}
+	}
 	return 0;
 }
 
